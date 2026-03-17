@@ -6,6 +6,17 @@ function selectOption(element) {
   screenshotType = element.dataset.type;
 }
 
+// 初始化事件监听
+document.addEventListener('DOMContentLoaded', () => {
+  // 绑定选项按钮点击事件
+  document.querySelectorAll('.option-btn').forEach(btn => {
+    btn.addEventListener('click', () => selectOption(btn));
+  });
+
+  // 绑定截图按钮点击事件
+  document.getElementById('captureBtn').addEventListener('click', captureScreenshot);
+});
+
 function showStatus(message, isError = false) {
   const status = document.getElementById('status');
   status.textContent = message;
