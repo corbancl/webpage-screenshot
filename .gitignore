@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
